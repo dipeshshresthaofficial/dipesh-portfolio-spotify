@@ -43,7 +43,7 @@ p{
   width: 30px;
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 0px;
   border: none;
   background: none;
   cursor: pointer;
@@ -81,8 +81,12 @@ nav{
 
 #ham-burger{
   color: var(--white);
+  display: none;
 }
 
+#toggle{
+  display: none;
+}
 
 #sidebar ul li{
   list-style: none;
@@ -120,8 +124,9 @@ font-size: 12px;
 }
 
 #content{
-  border: 1px solid var(--dark-black);
+  /* border: 1px solid var(--dark-black); */
   margin-left: 8vw;
+  position: relative;
 }
 
 
@@ -245,7 +250,7 @@ h1{
 }
 
 #bio-cont{
-  width: 70%;
+  width: 80%;
   padding: 40px;
   display: flex;
   flex-direction: row;
@@ -257,7 +262,7 @@ h1{
 #bio-desc{
 
 display: inline-block;
-width: 60%;
+width: 50%;
 }
 
 #bio-desc p{
@@ -267,7 +272,7 @@ width: 60%;
 #skills{
 float: right;
 display: inline-block;
-width: 30%;
+width: 40%;
 }
 
 #skills img{
@@ -281,27 +286,26 @@ width: 30%;
   min-height: 60vh;
   margin-top: 50px;
 }
+
 #edu-sec-cont{
-  /* border: 1px solid yellow;  */
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  /* top: 50%; */
-  transform: translate(-45%);
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 #edu-cont{
-  margin-top: 50px;
-
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 #edu-headings{
 
-  display: inline-block;
-  float: left;
   height: 100%;
   width: 40%;
-  /* border-left: 2px solid var(--dark-black); */
-  /* border: 2px solid purple; */
-
   margin-right: 20px;
 }
 
@@ -309,12 +313,12 @@ width: 30%;
   display: block;
   outline: none;
   text-decoration: none;
-  border: none;
   padding: 8px 16px;
   width: 70%;
   background-color: var(--light-grey);
   color: var(--white);
   /* border-left: 2px solid var(--spotify-green); */
+  border: none;
   border-left: 2px solid var(--light-grey);
   cursor: pointer;
 
@@ -330,8 +334,7 @@ width: 30%;
 
 #edu-desc{
   /* float: right; */
-  display: inline-block;
-  width: 50%;
+  width: 50%; 
   /* position: relative; */
   /* border: 2px solid orange; */
   /* margin-right: 50px; */
@@ -368,26 +371,31 @@ width: 30%;
   min-height: 100vh;
 }
 #exp-sec-cont{
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #exp-cont{
-  /* border: 1px solid yellow; */
+  width: 70%;
   margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 #exp-desc{
   /* float: left; */
-  display: inline-block;
+  /* display: inline-block; */
   width: 50%;
   margin-left: 20px;
 }
 
 #exp-headings{
-  float: right;
-  display: inline-block;
+  /* float: right;
+  display: inline-block; */
   width: 40%;
   margin-right: 20px;
 }
@@ -597,13 +605,13 @@ width: 30%;
   height: 100vh;
   position: relative;
   margin-top: 80px;
-  
+  display: flex;
+  justify-content: center;
 }
 
 #contact-sec-cont{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
   width: 42%;
   text-align: center;
 }
@@ -660,6 +668,23 @@ width: 30%;
   display: inline-block;
   margin-right: 30px;
   cursor: pointer;
+}
+
+/* --------------------- Footer Section --------------- */
+
+#footer-sec{
+  padding: 0 0 0 0 !important;
+  position: fixed;
+  bottom: 220px;
+  right: -162px;
+  transform: rotate(90deg);
+  z-index: 999999999;
+  color: var(--white);
+}
+
+#footer-sec a{
+  text-decoration: none;
+  color: var(--spotify-green);
 }
 
 
@@ -722,8 +747,14 @@ width: 30%;
     }
 
 
+    /* --------------- Home Section ----------------- */
+
+  h1{
+    font-size: 2.0em;
+  }
   #outer-cont{
     width: 100%;
+    justify-content: center;
   }
   #main-content{
     width: 100%;
@@ -741,30 +772,114 @@ width: 30%;
   /* ---------------- Bio Section ------------------------ */
 
   #bio-cont{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; */
     width: auto;
+    padding: 40px 0 0 0;
+    justify-content: center;
   }
 
   #bio-desc{
     width: 100%;
   }
 
+  #bio-desc p{
+    
+    text-align: justify;
+  }
+
   #skills {
-    width: 100%;
+    width: 80%;
     margin-top: 50px;
   }
 
   
+/* ------------------- Education Section ------------------ */
 
+#edu-sec-cont{
+
+  width: 100%;
+}
+#edu-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#edu-headings{
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* margin-right: 20px; */
+  /* overflow-x: scroll; */
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+}
+
+#edu-headings button{
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  inline-size: 300px;
+  border: none;
+  border-bottom: 2px solid var(--light-grey) ;
+}
+
+#edu-tab-0{
+  border-left: none !important;
+  border-bottom: 2px solid var(--spotify-green) !important;
+}
+
+#edu-desc{
+  width: 100%;
+  text-align: justify;
+  margin-top: 30px;
+}
 /* ------------------- Experience Section ------------------ */
+
+
+#exp-cont{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 #exp-sec-cont{
   position: relative;
 }
 
-/* ------------------- Project Section ---------------------- */
+#exp-desc{
+  width: 100%;
+  text-align: justify;
+  margin-left: 0;
+  margin-top: 30px;
+}
 
+#exp-headings{
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+  width: 100%;
+}
+
+#exp-headings button{
+  border: none;
+  border-bottom: 2px solid var(--light-grey);
+}
+
+#exp-tab-0{
+  border-right: none !important;
+  border-bottom: 2px solid var(--spotify-green) !important;
+}
+
+/* ------------------- Project Section ---------------------- */
+#prj-sec{
+  margin-top: 0;
+}
 .prj-cont{
   margin-bottom: 60px;
 }
@@ -773,7 +888,7 @@ width: 30%;
 }
 
 .prj-desc-cont{
-  width: 80%;
+  width: 100%;
   margin-top: 30px;
   text-align: justify;
 }
@@ -784,16 +899,27 @@ width: 30%;
   flex-wrap: wrap;
 }
 
+.prj-cont .prj-pic-cont{
+  text-align: center;
+}
+.prj-cont .prj-pic-cont-left{
+  text-align: center;  
+}
+
 /* ------------------- Blogs Section ------------------------- */
-
-
+#blog-sec{
+  margin-top: 0px;
+}
+.blog-cont{
+  width: 100%;
+}
 
 /* --------------------Contact Section ------------------------ */
 #contact-sec{
   margin-top: 0;
 }
 #contact-sec-cont{
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
