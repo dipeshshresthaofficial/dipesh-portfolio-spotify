@@ -56,6 +56,7 @@ p{
 }
 
 
+
 /* -------------Sidebar Section ---------------- */
 nav{
   display: none;
@@ -91,7 +92,7 @@ nav{
 #sidebar ul li{
   list-style: none;
 /*   padding: 10px; */
-  margin: 2px;
+  /* margin: 2px; */
 /*   border: 1px solid var(--spotify-green); */
 height:  70px;
 /* line-height: 70px; */
@@ -631,6 +632,36 @@ width: 40%;
 #contact-form{
   width: 100%;
   margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "fname lname"
+  "email email"
+  "msg_sub msg_sub"
+  "msg msg"
+  "submit_btn submit_btn";
+  grid-gap: 5px;
+}
+
+#fname{
+  grid-area: fname;
+}
+
+#lname{
+  grid-area: lname;
+}
+#email{
+  grid-area: email;
+}
+#msg_sub{
+  grid-area: msg_sub;
+}
+#msg{
+  grid-area: msg;
+}
+#contact-submit-btn{
+  grid-area: submit_btn;
 }
 
 #form-upper input{
@@ -645,11 +676,11 @@ width: 40%;
   
 }
 
-#form-upper input, #form-lower input,  #form-lower textarea{
+#contact-form input, textarea{
   outline: none;
   border: none;
-  padding: 13px 15px;
-  margin-bottom: 20px;
+  padding: 2px 8px;
+  margin-bottom: 10px;
   border-radius: 10px;
   font-size: 15px;  
   font-weight: bolder !important;
@@ -686,7 +717,7 @@ width: 40%;
   bottom: 220px;
   right: -152px;
   transform: rotate(90deg);
-  z-index: 999999999;
+  z-index: 9;
   color: var(--white);
 }
 
@@ -721,7 +752,7 @@ width: 40%;
     width: 100vw;
     height: auto;
     min-height: 8vh;
-    z-index: 999;
+    z-index: 999999;
   }
   #sidebar #logo{
     margin: 0 0 0 20px;
@@ -972,6 +1003,22 @@ width: 40%;
   align-items: center;
 }
 
+
+#contact-form{
+  width: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "fname fname"
+  "lname lname"
+  "email email"
+  "msg_sub msg_sub"
+  "msg msg"
+  "submit_btn submit_btn";
+  grid-gap: 5px;
+}
 #form-upper input{
   width: 100%;
 }
