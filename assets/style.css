@@ -704,6 +704,10 @@ width: 40%;
   .edu-desc-lst, .exp-desc-lst{
     padding-left: 10px;
   }
+
+  .sec-cont{
+    padding: 0;
+  }
   
   #scroll-to-top{
     right: 0.5px;
