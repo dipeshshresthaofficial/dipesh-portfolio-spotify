@@ -699,7 +699,19 @@ width: 40%;
 /* Media Queries */
 
 @media only screen and (max-width: 768px){
+
+  /* ---------- Sharing code ---------------- */
+  .edu-desc-lst, .exp-desc-lst{
+    padding-left: 10px;
+  }
   
+  #scroll-to-top{
+    right: 0.5px;
+  }
+  #scroll-to-top svg{
+    width: 15px;
+  }
+
   #sidebar{
     /* display: none; */
     width: 100vw;
@@ -714,7 +726,7 @@ width: 40%;
   }
   
   #ham-burger{
-      margin: 0 40px 0 0;
+      margin: 0 26px 0 0;
       font-size: 25px;
       float: right;
       display: block;
@@ -758,7 +770,7 @@ width: 40%;
     /* --------------- Home Section ----------------- */
 
   h1{
-    font-size: 2.0em;
+    font-size: 1.5em;
   }
   #outer-cont{
     width: 100%;
@@ -768,6 +780,10 @@ width: 40%;
     width: 100%;
   }
 
+  #main-content p{
+    margin-top: 40px;
+  }
+
   #profile-img{
     margin-top: 60px;
   }
@@ -775,6 +791,7 @@ width: 40%;
   #content{
     margin-left: 0;
   }
+
 
 
   /* ---------------- Bio Section ------------------------ */
@@ -805,7 +822,9 @@ width: 40%;
 
   
 /* ------------------- Education Section ------------------ */
-
+#edu-sec{
+  margin-top: 0;
+}
 #edu-sec h2{
   text-align: center;
   margin-left: 0;
@@ -878,6 +897,7 @@ width: 40%;
   margin-top: 30px;
 }
 
+
 #exp-headings{
   display: flex;
   flex-direction: row;
@@ -947,6 +967,31 @@ width: 40%;
 
 #form-upper input{
   width: 100%;
+}
+
+#social-links{
+  margin-top: 30px;
+}
+
+#social-links ul{
+}
+
+#social-links ul li{
+  text-decoration: none;
+  list-style-type: none;
+  width: 25px;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#footer-sec{
+  bottom: 190px;
+  right: -138px;
+}
+
+#footer-sec p{
+  font-size: 14px;
 }
 
 
