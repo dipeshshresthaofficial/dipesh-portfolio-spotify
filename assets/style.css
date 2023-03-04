@@ -43,7 +43,7 @@ p{
   width: 30px;
   position: fixed;
   bottom: 10px;
-  right: 0px;
+  right: 8px;
   border: none;
   background: none;
   cursor: pointer;
@@ -238,9 +238,9 @@ h1{
   
 }
 
-/* #bio-sec h2{
-  transform: translate(-40%);
-} */
+#bio-sec h2{
+  margin-left: 172px;
+}
 
 #bio-sec-cont{
   /* border: 1px solid yellow; */
@@ -285,6 +285,10 @@ width: 40%;
   position: relative;
   min-height: 60vh;
   margin-top: 50px;
+}
+
+#edu-sec h2{
+  margin-left: 182px;
 }
 
 #edu-sec-cont{
@@ -369,6 +373,10 @@ width: 40%;
   position: relative;
   width: 100%;  
   min-height: 100vh;
+}
+
+#exp-sec h2{
+  margin-left: 205px;
 }
 #exp-sec-cont{
   display: flex;
@@ -604,7 +612,7 @@ width: 40%;
 #contact-sec{
   height: 100vh;
   position: relative;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   display: flex;
   justify-content: center;
 }
@@ -617,7 +625,7 @@ width: 40%;
 }
 
 #contact-sec-cont p{
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 #contact-form{
@@ -676,7 +684,7 @@ width: 40%;
   padding: 0 0 0 0 !important;
   position: fixed;
   bottom: 220px;
-  right: -162px;
+  right: -152px;
   transform: rotate(90deg);
   z-index: 999999999;
   color: var(--white);
@@ -771,6 +779,10 @@ width: 40%;
 
   /* ---------------- Bio Section ------------------------ */
 
+  #bio-sec h2{
+    text-align: center;
+    margin-left: 0;
+  }
   #bio-cont{
     width: auto;
     padding: 40px 0 0 0;
@@ -794,6 +806,10 @@ width: 40%;
   
 /* ------------------- Education Section ------------------ */
 
+#edu-sec h2{
+  text-align: center;
+  margin-left: 0;
+}
 #edu-sec-cont{
 
   width: 100%;
@@ -838,7 +854,10 @@ width: 40%;
 }
 /* ------------------- Experience Section ------------------ */
 
-
+#exp-sec h2{
+  text-align: center;
+  margin-left: 0;
+}
 #exp-cont{
   width: 100%;
   display: flex;
