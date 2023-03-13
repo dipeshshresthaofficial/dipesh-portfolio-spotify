@@ -43,7 +43,7 @@ p{
   width: 30px;
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 8px;
   border: none;
   background: none;
   cursor: pointer;
@@ -56,7 +56,11 @@ p{
 }
 
 
+
 /* -------------Sidebar Section ---------------- */
+nav{
+  display: none;
+}
 #sidebar{
   /* border: 1px solid red; */
   width: 8vw;
@@ -66,19 +70,29 @@ p{
   top: 0;
   background-color: var(--dark-black);
   text-align: center;
+  /* visibility: ; */
 }
 
 #sidebar #logo{
-  color: var(--white);
-  margin-bottom: 120px;
+  color: var(--spotify-green);
+  margin: 10px 0 120px 0;
+  font-size: 25px;
+  font-weight: 800;
 }
 
+#ham-burger{
+  color: var(--white);
+  display: none;
+}
 
+#toggle{
+  display: none;
+}
 
 #sidebar ul li{
   list-style: none;
 /*   padding: 10px; */
-  margin: 2px;
+  /* margin: 2px; */
 /*   border: 1px solid var(--spotify-green); */
 height:  70px;
 /* line-height: 70px; */
@@ -111,8 +125,9 @@ font-size: 12px;
 }
 
 #content{
-  border: 1px solid var(--dark-black);
+  /* border: 1px solid var(--dark-black); */
   margin-left: 8vw;
+  position: relative;
 }
 
 
@@ -133,21 +148,30 @@ text-align: justify;
 /* ----------------------------------Home Section Starts ------------------------------- */
 
 #home-sec{
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 #outer-cont{
   width: 70%;
-  position:absolute;
+  height: 100%;
+  /* position:absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-45%,-50%);
+  transform: translate(-45%,-50%); */
   /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 #main-content{
   width: 61%;
-  float: left;
+  /* float: left; */
   /* border: 1px solid green; */
 }
 
@@ -181,10 +205,11 @@ h1{
 }
 
 #profile-img{
-  float: right;
+  /* float: right; */
   /* border: 1px solid red; */
   margin-left: 20px;
   position: relative;
+  height: 70%;
 }
 
 #home-sec #profile-img::after{
@@ -208,27 +233,37 @@ h1{
 /* ------------------------------------ Bio Section Starts ----------------------------------- */
 
 #bio-sec{
-  height: 100vh;
-  
+  min-height: 100vh;
   margin-top: 80px;
+  
+  
+}
+
+#bio-sec h2{
+  margin-left: 172px;
 }
 
 #bio-sec-cont{
   /* border: 1px solid yellow; */
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-43%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #bio-cont{
+  width: 80%;
   padding: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 #bio-desc{
 
 display: inline-block;
-width: 60%;
+width: 50%;
 }
 
 #bio-desc p{
@@ -238,7 +273,7 @@ width: 60%;
 #skills{
 float: right;
 display: inline-block;
-width: 30%;
+width: 40%;
 }
 
 #skills img{
@@ -249,30 +284,33 @@ width: 30%;
 /* -------------------------Education Section Start --------------------------------- */
 #edu-sec{
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
   margin-top: 50px;
 }
+
+#edu-sec h2{
+  margin-left: 182px;
+}
+
 #edu-sec-cont{
-  /* border: 1px solid yellow;  */
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  /* top: 50%; */
-  transform: translate(-45%);
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 #edu-cont{
-  margin-top: 50px;
-
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 #edu-headings{
 
-  display: inline-block;
-  float: left;
   height: 100%;
   width: 40%;
-  /* border-left: 2px solid var(--dark-black); */
-  /* border: 2px solid purple; */
-
   margin-right: 20px;
 }
 
@@ -280,12 +318,12 @@ width: 30%;
   display: block;
   outline: none;
   text-decoration: none;
-  border: none;
   padding: 8px 16px;
   width: 70%;
   background-color: var(--light-grey);
   color: var(--white);
   /* border-left: 2px solid var(--spotify-green); */
+  border: none;
   border-left: 2px solid var(--light-grey);
   cursor: pointer;
 
@@ -301,8 +339,7 @@ width: 30%;
 
 #edu-desc{
   /* float: right; */
-  display: inline-block;
-  width: 50%;
+  width: 50%; 
   /* position: relative; */
   /* border: 2px solid orange; */
   /* margin-right: 50px; */
@@ -336,29 +373,38 @@ width: 30%;
 #exp-sec{
   position: relative;
   width: 100%;  
-  height: 100vh;
+  min-height: 100vh;
+}
+
+#exp-sec h2{
+  margin-left: 205px;
 }
 #exp-sec-cont{
-  width: 70%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-45%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #exp-cont{
-  /* border: 1px solid yellow; */
+  width: 70%;
   margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 #exp-desc{
   /* float: left; */
-  display: inline-block;
+  /* display: inline-block; */
   width: 50%;
   margin-left: 20px;
 }
 
 #exp-headings{
-  float: right;
-  display: inline-block;
+  /* float: right;
+  display: inline-block; */
   width: 40%;
   margin-right: 20px;
 }
@@ -392,7 +438,7 @@ width: 30%;
 /*--------------------------------------- Project Section Start ---------------------------- */
 
 #prj-sec{
-  height: auto !important;
+  height: auto;
   margin-top: 80px;
 }
 
@@ -407,16 +453,21 @@ width: 30%;
   /* border: 1px solid orange; */
   margin-bottom: 40px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .prj-cont .prj-pic-cont{
   text-align: right;
 }
 .prj-cont .prj-pic-cont-left{
-  text-align: left;
+  text-align: left;  
 }
 .prj-pic-cont{
   /* float: left; */
-  display: inline-block;
+  /* display: block; */
   width: 30%;
   /* border: 1px solid red; */
 }
@@ -427,7 +478,7 @@ width: 30%;
 
 .prj-desc-cont{
   /* float: right; */
-  display: inline-block;
+  /* display: block; */
   width: 40%;
   text-align: right;
   /* border: 1px solid yellow; */
@@ -500,6 +551,11 @@ width: 30%;
 }
 #blog-sec-cont{
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 #blog{
   /* margin-top: 50px; */
@@ -509,9 +565,8 @@ width: 30%;
 .blog-cont{
   height: 300px;
   width: 300px;
-  margin-top: 20px;
-  /* border: 1px solid red; */
-  display: inline-block;
+  margin: 20px 13px 20px 13px;
+
 }
 .blog-img-cont{
   height: 75%;
@@ -528,7 +583,7 @@ width: 30%;
 .blog-desc-cont{
   height: 25%;
   padding: 10px 5px;
-  border: 1px solid #221f1f;
+  border: 2px solid #221f1f;
 }
 .blog-desc-cont a{
   text-decoration: none;
@@ -558,25 +613,55 @@ width: 30%;
 #contact-sec{
   height: 100vh;
   position: relative;
-  margin-top: 80px;
-  
+  /* margin-top: 80px; */
+  display: flex;
+  justify-content: center;
 }
 
 #contact-sec-cont{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
   width: 42%;
   text-align: center;
 }
 
 #contact-sec-cont p{
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 #contact-form{
   width: 100%;
   margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "fname lname"
+  "email email"
+  "msg_sub msg_sub"
+  "msg msg"
+  "submit_btn submit_btn";
+  grid-gap: 5px;
+}
+
+#fname{
+  grid-area: fname;
+}
+
+#lname{
+  grid-area: lname;
+}
+#email{
+  grid-area: email;
+}
+#msg_sub{
+  grid-area: msg_sub;
+}
+#msg{
+  grid-area: msg;
+}
+#contact-submit-btn{
+  grid-area: submit_btn;
 }
 
 #form-upper input{
@@ -591,11 +676,11 @@ width: 30%;
   
 }
 
-#form-upper input, #form-lower input,  #form-lower textarea{
+#contact-form input, textarea{
   outline: none;
   border: none;
-  padding: 13px 15px;
-  margin-bottom: 20px;
+  padding: 2px 8px;
+  margin-bottom: 10px;
   border-radius: 10px;
   font-size: 15px;  
   font-weight: bolder !important;
@@ -622,5 +707,347 @@ width: 30%;
   display: inline-block;
   margin-right: 30px;
   cursor: pointer;
+}
+
+/* --------------------- Footer Section --------------- */
+
+#footer-sec{
+  padding: 0 0 0 0 !important;
+  position: fixed;
+  bottom: 220px;
+  right: -152px;
+  transform: rotate(90deg);
+  z-index: 9;
+  color: var(--white);
+}
+
+#footer-sec a{
+  text-decoration: none;
+  color: var(--spotify-green);
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px){
+
+  /* ---------- Sharing code ---------------- */
+  .edu-desc-lst, .exp-desc-lst{
+    padding-left: 10px;
+  }
+
+  .sec-cont{
+    padding: 0;
+  }
+  
+  #scroll-to-top{
+    right: 0.5px;
+  }
+  #scroll-to-top svg{
+    width: 15px;
+  }
+
+  #sidebar{
+    /* display: none; */
+    width: 100vw;
+    height: auto;
+    min-height: 8vh;
+    z-index: 999999;
+  }
+  #sidebar #logo{
+    margin: 0 0 0 20px;
+    float: left;
+    line-height: 12vh;
+  }
+  
+  #ham-burger{
+      margin: 0 26px 0 0;
+      font-size: 25px;
+      float: right;
+      display: block;
+      color: var(--white);
+      cursor: pointer;
+      float: right;
+      
+    line-height: 12vh;
+    }
+
+    #nav{
+      display: none;
+      background-color:  var(--dark-black);
+      
+    }
+
+    #sidebar ul li{
+      height:  50px;
+      /* line-height: 70px; */
+        padding-top: 5px;
+      }
+    
+  
+    #nav li{
+      display: block;
+    }
+    #toggle{
+      display: none;
+    }
+    #toggle:checked + #nav{
+      display: block;
+      width: 100%;
+      text-align: center;
+  /*     "clear" property Doesn't allow #nav to float on right side*/
+      /* clear: right;   */
+  /*     border: 2px solid black; */
+      margin-top: 80px;
+    }
+
+
+    /* --------------- Home Section ----------------- */
+
+  #home-sec h1{
+    font-size: 1.3em;
+  }
+  #home-sec h3{
+    font-size: 14px;
+  }
+  #outer-cont{
+    width: 100%;
+    justify-content: center;
+  }
+  #main-content{
+    width: 100%;
+  }
+
+  #main-content p{
+    margin-top: 40px;
+  }
+
+  #profile-img{
+    margin-top: 60px;
+  }
+  
+  #content{
+    margin-left: 0;
+  }
+
+
+
+  /* ---------------- Bio Section ------------------------ */
+
+  #bio-sec h2{
+    text-align: center;
+    margin-left: 0;
+  }
+  #bio-cont{
+    width: auto;
+    padding: 40px 0 0 0;
+    justify-content: center;
+  }
+
+  #bio-desc{
+    width: 100%;
+  }
+
+  #bio-desc p{
+    
+    text-align: justify;
+  }
+
+  #skills {
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  
+/* ------------------- Education Section ------------------ */
+#edu-sec{
+  margin-top: 0;
+}
+#edu-sec h2{
+  text-align: center;
+  margin-left: 0;
+}
+#edu-sec-cont{
+
+  width: 100%;
+}
+#edu-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#edu-headings{
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* margin-right: 20px; */
+  /* overflow-x: scroll; */
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+}
+
+#edu-headings button{
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  inline-size: 300px;
+  border: none;
+  border-bottom: 2px solid var(--light-grey) ;
+}
+
+#edu-tab-0{
+  border-left: none !important;
+  border-bottom: 2px solid var(--spotify-green) !important;
+}
+
+#edu-desc{
+  width: 100%;
+  text-align: justify;
+  margin-top: 30px;
+}
+/* ------------------- Experience Section ------------------ */
+
+#exp-sec h2{
+  text-align: center;
+  margin-left: 0;
+}
+#exp-cont{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#exp-sec-cont{
+  position: relative;
+}
+
+#exp-desc{
+  width: 100%;
+  text-align: justify;
+  margin-left: 0;
+  margin-top: 30px;
+}
+
+
+#exp-headings{
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+  width: 100%;
+}
+
+#exp-headings button{
+  border: none;
+  border-bottom: 2px solid var(--light-grey);
+}
+
+#exp-tab-0{
+  border-right: none !important;
+  border-bottom: 2px solid var(--spotify-green) !important;
+}
+
+/* ------------------- Project Section ---------------------- */
+#prj-sec{
+  margin-top: 0;
+}
+.prj-cont{
+  margin-bottom: 60px;
+}
+.prj-pic-cont{
+  width: 100%;
+}
+
+.prj-desc-cont{
+  width: 100%;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.prj-cont-reverse{
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+}
+
+.prj-cont .prj-pic-cont{
+  text-align: center;
+}
+.prj-cont .prj-pic-cont-left{
+  text-align: center;  
+}
+
+/* ------------------- Blogs Section ------------------------- */
+#blog-sec{
+  margin-top: 0px;
+}
+.blog-cont{
+  width: 100%;
+}
+
+/* --------------------Contact Section ------------------------ */
+#contact-sec{
+  margin-top: 0;
+}
+#contact-sec-cont{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#contact-form{
+  width: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "fname fname"
+  "lname lname"
+  "email email"
+  "msg_sub msg_sub"
+  "msg msg"
+  "submit_btn submit_btn";
+  grid-gap: 5px;
+}
+#form-upper input{
+  width: 100%;
+}
+
+#social-links{
+  margin-top: 30px;
+}
+
+#social-links ul{
+}
+
+#social-links ul li{
+  text-decoration: none;
+  list-style-type: none;
+  width: 25px;
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#footer-sec{
+  bottom: 190px;
+  right: -138px;
+}
+
+#footer-sec p{
+  font-size: 14px;
+}
+
+
 }
 
