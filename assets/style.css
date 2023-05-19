@@ -34,7 +34,7 @@ p{
 
 
 #content section{
-  padding: 80px 50px;
+  padding: 20px 50px;
   background-color: var(--light-black);
   color: var(--white);
 }
@@ -97,6 +97,8 @@ nav{
 height:  70px;
 /* line-height: 70px; */
   padding-top: 20px;
+  width: 100%;
+  z-index: 1;
 }
 
 .sidebar-icons{
@@ -108,20 +110,24 @@ height:  70px;
   padding: 0;
 }
 
-#sidebar ul li:first-child{
+/* #sidebar ul li:first-child{
+  background-color: var(--light-black);
+  border-left: 5px solid var(--spotify-green);
+} */
+
+.sidebar-active{
   background-color: var(--light-black);
   border-left: 5px solid var(--spotify-green);
 }
 
-#sidebar ul li a{
-/*   display: block; */
-font-size: 12px;
-}
 
 #sidebar ul li a{
   text-decoration: none;
   outline: none;
   color: var(--white);
+  font-size: 12px;
+width: 100%;
+height: 100%;
 }
 
 #content{
@@ -133,7 +139,7 @@ font-size: 12px;
 
 .sec-cont{
   margin-top: 50px;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 #bio-desc{
@@ -152,6 +158,7 @@ text-align: justify;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 70px 0;
 }
 
 #outer-cont{
@@ -233,8 +240,8 @@ h1{
 /* ------------------------------------ Bio Section Starts ----------------------------------- */
 
 #bio-sec{
-  min-height: 100vh;
-  margin-top: 80px;
+  /* min-height: 100vh; */
+  margin-top: 120px;
   
   
 }
@@ -252,7 +259,7 @@ h1{
 
 #bio-cont{
   width: 80%;
-  padding: 40px;
+  padding: 0 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -284,8 +291,8 @@ width: 40%;
 /* -------------------------Education Section Start --------------------------------- */
 #edu-sec{
   position: relative;
-  min-height: 60vh;
-  margin-top: 50px;
+  /* min-height: 60vh; */
+  margin-top: 80px;
 }
 
 #edu-sec h2{
@@ -298,7 +305,7 @@ width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 #edu-cont{
   width: 70%;
@@ -320,7 +327,7 @@ width: 40%;
   text-decoration: none;
   padding: 8px 16px;
   width: 70%;
-  background-color: var(--light-grey);
+  background-color: var(--light-black);
   color: var(--white);
   /* border-left: 2px solid var(--spotify-green); */
   border: none;
@@ -328,13 +335,9 @@ width: 40%;
   cursor: pointer;
 
 }
-
-#edu-tab-0{
+.edu-active{
+  background-color: var(--light-grey) !important;
   border-left: 2px solid var(--spotify-green) !important;
-}
-
-#edu-tab-1{
-  background-color: var(--light-black) !important;
 }
 
 #edu-desc{
@@ -353,7 +356,7 @@ width: 40%;
 #edu-desc, #exp-desc{
   line-height: 20px;
 }
-#edu-panel-1, #exp-panel-1{
+#edu-desc-1, #exp-desc-1, #exp-desc-2{
   display: none;
 }
 
@@ -365,7 +368,7 @@ width: 40%;
 }
 
 .edu-desc-lst, .exp-desc-lst{
-  padding-left: 50px;
+  padding-left: 18px;
 }
 
 
@@ -373,7 +376,8 @@ width: 40%;
 #exp-sec{
   position: relative;
   width: 100%;  
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin-top: 80px;
 }
 
 #exp-sec h2{
@@ -388,7 +392,7 @@ width: 40%;
 }
 #exp-cont{
   width: 70%;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -416,23 +420,18 @@ width: 40%;
   border: none;
   padding: 8px 16px;
   width: 80%;
-  background-color: var(--light-grey);
+  background-color: var(--light-black);
   color: var(--white);
   /* border-left: 2px solid var(--spotify-green); */
   border-right: 2px solid var(--light-grey);
   cursor: pointer;
 }
 
-#exp-tab-0{
+.exp-active{
+  background-color: var(--light-grey) !important;
   border-right: 2px solid var(--spotify-green) !important;
 }
 
-#exp-tab-1{
-  background-color: var(--light-black) !important;
-}
-#exp-tab-2{
-  background-color: var(--light-black) !important;
-}
 
 
 /*--------------------------------------- Project Section Start ---------------------------- */
@@ -447,7 +446,7 @@ width: 40%;
 }
 
 #prj-sec-cont{
-  margin-top: 80px;
+  /* margin-top: 60px; */
 }
 .prj-cont{
   /* border: 1px solid orange; */
@@ -549,14 +548,21 @@ width: 40%;
   
   margin-top: 80px;
 }
+
+
 #blog-sec-cont{
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
+
+/* #blog-sec-cont::after{
+  content: "";
+  width: 600px;
+} */
 #blog{
   /* margin-top: 50px; */
   
@@ -611,9 +617,9 @@ width: 40%;
 
 /* --------------Contact Me Start ------------------ */
 #contact-sec{
-  height: 100vh;
+  height: 90vh;
   position: relative;
-  /* margin-top: 80px; */
+  margin-top: 80px;
   display: flex;
   justify-content: center;
 }
@@ -626,7 +632,7 @@ width: 40%;
 }
 
 #contact-sec-cont p{
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 #contact-form{
@@ -840,7 +846,7 @@ width: 40%;
   }
   #bio-cont{
     width: auto;
-    padding: 40px 0 0 0;
+    padding: 0 0 0 0;
     justify-content: center;
   }
 
@@ -861,7 +867,7 @@ width: 40%;
   
 /* ------------------- Education Section ------------------ */
 #edu-sec{
-  margin-top: 0;
+  margin-top: 60px;
 }
 #edu-sec h2{
   text-align: center;
@@ -899,8 +905,10 @@ width: 40%;
   border-bottom: 2px solid var(--light-grey) ;
 }
 
-#edu-tab-0{
+
+.edu-active{
   border-left: none !important;
+  background-color: var(--light-grey) !important;
   border-bottom: 2px solid var(--spotify-green) !important;
 }
 
@@ -948,8 +956,9 @@ width: 40%;
   border-bottom: 2px solid var(--light-grey);
 }
 
-#exp-tab-0{
+.exp-active{
   border-right: none !important;
+  background-color: var(--light-grey) !important;
   border-bottom: 2px solid var(--spotify-green) !important;
 }
 
