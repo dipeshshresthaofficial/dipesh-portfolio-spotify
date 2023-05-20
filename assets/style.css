@@ -118,6 +118,7 @@ height:  70px;
 .sidebar-active{
   background-color: var(--light-black);
   border-left: 5px solid var(--spotify-green);
+  transition: .5s;
 }
 
 
@@ -338,6 +339,7 @@ width: 40%;
 .edu-active{
   background-color: var(--light-grey) !important;
   border-left: 2px solid var(--spotify-green) !important;
+  transition: 1.5s;
 }
 
 #edu-desc{
@@ -430,6 +432,7 @@ width: 40%;
 .exp-active{
   background-color: var(--light-grey) !important;
   border-right: 2px solid var(--spotify-green) !important;
+  transition: 1.5s;
 }
 
 
@@ -467,18 +470,26 @@ width: 40%;
 .prj-pic-cont{
   /* float: left; */
   /* display: block; */
-  width: 30%;
+  width: 20%;
+  padding: 20px;
   /* border: 1px solid red; */
 }
 
 .prj-pic-cont img{
-  width: 193px;
+  height: 80%;
+  width: 80%;
+  opacity: 0.7;
+  transition: transform .2s; /* Animation */
+}
+
+.prj-pic-cont img:hover{
+  transform:scale(1.5)
 }
 
 .prj-desc-cont{
   /* float: right; */
   /* display: block; */
-  width: 40%;
+  width: 50%;
   text-align: right;
   /* border: 1px solid yellow; */
   /* margin: 20px; */
