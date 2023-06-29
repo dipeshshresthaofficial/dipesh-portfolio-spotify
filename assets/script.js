@@ -9,6 +9,9 @@ sidebarItems.forEach(item =>{
         })
         item.parentElement.classList.add('sidebar-active');
         // console.log(item.id);
+        if(window.matchMedia("(max-width: 768px)")){
+            document.getElementById("toggle").checked = false;
+        }
     })
 })
 
@@ -80,4 +83,19 @@ expBtnRef.forEach(btn => {
 
     })
 })
+
+// Submit Email Logic of SMTPJS : https://smtpjs.com/
+
+function sendEmail(){
+
+    Email.send({
+        SecureToken: "c2dcb4c7-b970-43c9-9ab9-098ab85bca3f",
+        To : 'dev.dipesh.info@gmail.com',
+        From : "dev.dipesh.info@gmail.com",
+        Subject : document.getElementById('msg_sub').value,
+        Body : "Name: "+document.getElementById('fname').value+" "+document.getElementById('lname').value+"<br>Email Id: "+document.getElementById('email').value+"<br>Message Body: "+document.getElementById('msg').value
+    }).then(
+      message => alert("Email sent successfully. I will get back to you soon. Thank you!")
+    );
+}
 

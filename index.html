@@ -111,12 +111,10 @@
             <h3>Hi,</h3>
             <h1>I'm<span class="portfolio-highlights"> Dipesh Shrestha</span>.</h1>
             <h1>I build things for the <span class="portfolio-highlights">web</span>.</h1>
-            <p>Diligent and enthusiastic computer science graduate student, conversant with UX design and development
-              technologies. Previous corporate experience as a Software Engineer at Oracle Cerner.
-              Commends by clients and management for development skills and best turnaround time.</p>
+            <p>A dedicated individual driven by a deep passion for creating end-to-end solutions that build sustainable and scalable social and technical systems, ultimately making a meaningful impact.</p>
             <button id="resume-btn">
-              <a target="_blank" href="https://drive.google.com/file/d/15xHqA3EiNxlUwyzeoSiEnFrhNmJXoCGR/view?usp=share_link">
-                Resume
+              <a target="_blank" href="https://linkedin.com/in/dipesh0314">
+                Linkedin
               </a>
             </button>
           </div>
@@ -149,10 +147,9 @@
                 Currently, I'm in United States pursuing my 
                 <span class="portfolio-highlights">Master's degree in Computer Science</span> 
                 from University of New Haven. Also, I have got an oppertunity to work as a
-                <span class="portfolio-highlights">Graduate Assistant </span>at University Immigration Services 
-                of the university.<br/><br/>
+                <span class="portfolio-highlights">Graduate Assistant </span>at University Immigration Services department of the university.<br/><br/>
                  
-                Here the <span class="portfolio-highlights">wordcloud</span> represents the list of techologies I'm familiar with.
+                Here, the <span class="portfolio-highlights">wordcloud</span> represents the list of technologies I'm familiar with.
               </p>
             </div>     
             <div id="skills">
@@ -178,6 +175,7 @@
                 <p>Aug 2022 - May 2024</p>
                 <div class="edu-desc-lst">
                   <ul>
+                    <li>Cumulative GPA: 4.0 out of 4.0</li>
                     <li>Completing courses focusing on Software Design Methodology, Theory, Analysis and Computer Systems.</li>
                     <li>Awarded with prestigious Dean's Scholarship</li>
                     <li>Acquired Graduate Assistantship position</li>
@@ -189,7 +187,7 @@
                   <p>Jul 2017 - Jul 2021</p>
                   <div  class="edu-desc-lst">
                     <ul>
-                      <li>Secure 9.57 CGPA out of 10</li>
+                      <li>Cumulative GPA: 9.57 out of 10.0</li>
                       <li>Completed competitive courses focusing and Software design and development</li>
                       <li>Acquired Class Representative position</li>
                     </ul>
@@ -212,9 +210,10 @@
                 <p>Jun 2021 - Aug 2022</p>
                 <div  class="exp-desc-lst">
                   <ul>
-                    <li>Analyzed client’s healthcare data, developed custom reports and visualization dashboards that helped doctors, and hospital management to provide proper care to patients, keep track of medication and handle emergency cases.</li>
-                    <li>Developed critical Covid19 projects, reports which helped the clients make easy decisions to improve patient outcomes.</li>
-                    <li>Contributed to the team to improve the process workflow to increase productivity and maintain the turnaround time.</li>
+                    <li> Leveraged data analysis expertise to analyze client's healthcare data, created custom reports and visualization dashboards that enabled the client to deliver optimal patient care, and monitor medication usage.</li>
+                    <li>Implemented database performance tuning strategies on legacy reports, resulting in improved query execution times and enhanced overall system efficiency.</li>
+                    <li>Recognized for significant contributions and dedication, resulting in our team becoming one of the top-producing sites within the organization.</li>
+                    <li>Experienced working closely with clients understanding their requirements on critical Covid-19 projects, and delivering time-sensitive reports that facilitated swift decision-making for emergency cases.</li>
                   </ul>
                 </div>
               </div>
@@ -223,9 +222,10 @@
                 <p>Jan 2021 - Jun 2021</p>
                 <div  class="exp-desc-lst">
                   <ul>
-                    <li>Performed ETL operations on vendor/ on-premises datasets for preprocessing of raw data.</li>
-                    <li>Created a dynamic Data Retention ADF pipeline which helped in garbage collection and saved storage issues in Data Lake.</li>
-                    <li>Worked extensively on enterprise-level project i.e., “Enterprise Data Platform” with a large team.</li>
+                    <li>Implemented a game-changing solution by crafting a dynamic data retention pipeline, automating the removal of outdated files and folders from Azure Data Lake storage, and enhancing the overall system efficiency for the team.</li>
+                    <li>Performed ETL operations on vendor/ on-premises datasets for preprocessing of raw data and leveraged my technical skills and adaptability by contributing to the transformative "Enterprise Data Platform" project.</li>
+                    <li>Performed end-to-end testing of pipelines and documented test cases in RQM (Rational Quality Manager).</li>
+                    <li>Followed Agile Methodology to plan, document, track, and release updates with the JIRA tool.</li>
                   </ul>
                 </div>
                 
@@ -235,9 +235,9 @@
                 <p>Dec 2019 - Jan 2020</p>
                 <div  class="exp-desc-lst">
                   <ul>
-                    <li>Worked on reformation of the Admin Panel (backend) and the frontend product section of the company’s official website which helped the company to showcase its products online with much detailed information.</li>
-                    <li>Assisted the marketing head with content creation to digitally market the company’s products.</li>
-                    <li>Adhered to Agile methodology which helped me to enhance my software development skill.</li>
+                    <li>Assisted in the reformation of the Admin Panel and redesigned the frontend product section of the company's website, significantly enhancing the online showcasing of products with comprehensive details.</li>
+                    <li>Collaborated with the marketing head to create compelling content for digital marketing campaigns.</li>
+                    <li>Successfully adopted and implemented agile methodology, while ensuring enhancement in my software development skills and seamless collaboration within the team.</li>
                   </ul>
                 </div>
                 
@@ -403,16 +403,17 @@
       <!-- ----------------------Contact Me Section------------------------ -->
       <section id="contact-sec">
         <div id="contact-sec-cont">
-
           <h2>Contact</h2>
           <p>I’m currently looking for new job opportunities as well as if you wanna collaborate, Please feel free to reach out to me.</p>
-          <form id="contact-form">
-              <input placeholder="First Name" id="fname" />
-              <input placeholder="Last Name" id="lname"/>
-              <input placeholder="Email" id="email"/>
-              <input placeholder="Message Subject" id="msg_sub"/>
-              <textarea placeholder="Message" id="msg"></textarea>
-              <input type="button" value="Submit" id="contact-submit-btn"/>
+          <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
+              <div id="name">
+
+                <input type="text" placeholder="First Name" id="fname" required/><input type="text" placeholder="Last Name" id="lname" name="lname" required/>
+              </div>
+              <input type="email" placeholder="example@domain.com" id="email" name="email" required/>
+              <input type="text" placeholder="Message Subject" id="msg_sub"/>
+              <textarea placeholder="Message" id="msg" name="message" rows="10" required></textarea>
+              <input type="submit" value="Submit" id="contact-submit-btn"/>
           </form>
           <div id="social-links">
             <ul>
@@ -455,6 +456,7 @@
     
       
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./assets/script.js"></script>
     <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

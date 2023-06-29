@@ -118,7 +118,7 @@ height:  70px;
 .sidebar-active{
   background-color: var(--light-black);
   border-left: 5px solid var(--spotify-green);
-  transition: .5s;
+  transition: .35s;
 }
 
 
@@ -269,7 +269,6 @@ h1{
 }
 
 #bio-desc{
-
 display: inline-block;
 width: 50%;
 }
@@ -286,6 +285,7 @@ width: 40%;
 
 #skills img{
   width: 100%;
+  transition: transform .2s; /* Animation */
 }
 
 
@@ -482,7 +482,7 @@ width: 40%;
   transition: transform .2s; /* Animation */
 }
 
-.prj-pic-cont img:hover{
+.prj-pic-cont img:hover, #skills img:hover{
   transform:scale(1.5)
 }
 
@@ -628,7 +628,7 @@ width: 40%;
 
 /* --------------Contact Me Start ------------------ */
 #contact-sec{
-  height: 90vh;
+  min-height: 90vh;
   position: relative;
   margin-top: 80px;
   display: flex;
@@ -638,59 +638,41 @@ width: 40%;
 #contact-sec-cont{
   display: flex;
   flex-direction: column;
-  width: 42%;
+  justify-content: space-evenly;
+  width: 60%;
   text-align: center;
+
 }
 
 #contact-sec-cont p{
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 #contact-form{
+  /* height: 60%; */
   width: 100%;
-  margin-top: 50px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  "fname lname"
-  "email email"
-  "msg_sub msg_sub"
-  "msg msg"
-  "submit_btn submit_btn";
-  grid-gap: 5px;
+  position: relative;
+  padding: 5px;
+}
+#contact-form > *{
+  width: 100%;
+}
+#contact-form > *:not(textarea){
+  height: 45px;
+}
+#name{
+  display: flex;
+  gap: 10px;
 }
 
 #fname{
-  grid-area: fname;
+  /* grid-area: fname; */
+  width: 50%;
 }
 
 #lname{
-  grid-area: lname;
-}
-#email{
-  grid-area: email;
-}
-#msg_sub{
-  grid-area: msg_sub;
-}
-#msg{
-  grid-area: msg;
-}
-#contact-submit-btn{
-  grid-area: submit_btn;
-}
-
-#form-upper input{
-  width: 49.5%;
-  margin: 0;
-  padding: 0;
-}
-
-#form-lower input, #form-lower textarea{
-  display: block;
-  width: 100%;
-  
+  /* grid-area: lname; */
+  width: 50%;
 }
 
 #contact-form input, textarea{
@@ -703,18 +685,27 @@ width: 40%;
   font-weight: bolder !important;
 }
 
+
+#contact-form input::placeholder{
+  font-size: 0.9rem;
+}
+
+
 #contact-submit-btn{
   background-color: var(--spotify-green);
   color: var(--white);
-  
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+
+#contact-submit-btn:active{
+  animation: buttonClick 2s ease;
 }
 
 #social-links{
-  margin-top: 30px;
-}
-
-#social-links ul{
+  /* margin-top: 30px; */
+  height: 40px;
+  position: relative;
 }
 
 #social-links ul li{
@@ -725,6 +716,16 @@ width: 40%;
   margin-right: 30px;
   cursor: pointer;
 }
+
+#social-links ul li a svg path{
+  transition: fill .25s ease;
+}
+
+#social-links ul li a:hover svg path {
+  fill: var(--spotify-green);
+  transform: rotate(5deg);
+}
+
 
 /* --------------------- Footer Section --------------- */
 
@@ -743,8 +744,18 @@ width: 40%;
   color: var(--spotify-green);
 }
 
+/*==================== Animations================ */
 
-/* Media Queries */
+@keyframes buttonClick {
+  0%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+/*============================================ Media Queries ===========================================*/
 
 @media only screen and (max-width: 768px){
 
@@ -873,6 +884,9 @@ width: 40%;
   #skills {
     width: 80%;
     margin-top: 50px;
+  }
+  .prj-pic-cont img:hover, #skills img:hover{
+    transform:scale(1.1)
   }
 
   
@@ -1027,7 +1041,7 @@ width: 40%;
 #contact-form{
   width: 100%;
   margin-top: 50px;
-  display: grid;
+  /* display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
@@ -1037,7 +1051,7 @@ width: 40%;
   "msg_sub msg_sub"
   "msg msg"
   "submit_btn submit_btn";
-  grid-gap: 5px;
+  grid-gap: 5px; */
 }
 #form-upper input{
   width: 100%;
