@@ -28,6 +28,11 @@ p{
   line-height: 25px;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .portfolio-highlights{
   color: var(--spotify-green);
 }
