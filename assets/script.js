@@ -1,3 +1,32 @@
+// hiding all 
+function hiddingBlocks(classNameOfBlocks){
+    let collectiveRef = document.querySelectorAll("."+classNameOfBlocks);
+    collectiveRef.forEach(item=>{
+        item.style.display = "none";
+    })
+}
+// hidding all education descriptions
+hiddingBlocks("edu-desc");
+// hidding all experience descriptions
+hiddingBlocks("exp-desc");
+
+// displaying the active ones
+function handleActiveBlock(activeHeaderBtnClassName){
+    let activeRef = document.getElementsByClassName(activeHeaderBtnClassName);
+    console.log(activeRef)
+    if(activeRef.length > 0){
+        console.log((activeRef[0].id.split("-")[0]).toString()+"-desc-"+(activeRef[0].id.split("-")[2]).toString())
+        let correspondingActiveDescId = (activeRef[0].id.split("-")[0]).toString()+"-desc-"+(activeRef[0].id.split("-")[2]).toString();
+        let correspondingActiveDescRef = document.getElementById(correspondingActiveDescId);
+        correspondingActiveDescRef.style.display = "block";
+    }
+}
+
+// displaying only the active education
+handleActiveBlock("edu-active");
+// displaying only the active experience
+handleActiveBlock("exp-active");
+
 // Toggle feature of Sidebar Section:
 const sidebarItems = document.querySelectorAll('.sidebar-item');
 sidebarItems.forEach(item =>{
@@ -25,6 +54,7 @@ eduBtn.forEach(btn=>{
         eduBtn.forEach(btn=>{
             if(btn.classList.contains('edu-active')){
                 btn.classList.remove('edu-active');
+                btn.querySelector("span").style.color="#5a5656";
             }
         })
 
@@ -33,19 +63,9 @@ eduBtn.forEach(btn=>{
         // Making clicked element active by adding active class
         activeEduBtn.classList.add('edu-active');
 
-        const eduDescRef = document.querySelectorAll('.edu-desc');
-        eduDescRef.forEach(item=>{
-            if(item.style.display !== 'none'){
-                item.style.display = 'none';
-            }
-        })
+        hiddingBlocks("edu-desc");
         
-        // processing id for education description of corresponding clicked button
-        var panelId = "edu-desc-"+id.toString();
-        // referencing education description of corresponding clicked button
-        var displayEduPanel = document.getElementById(panelId);
-        // displaying education description of corresponding clickedd button
-        displayEduPanel.style.display='block';
+        handleActiveBlock("edu-active");
     });
 })
 
@@ -73,17 +93,9 @@ expBtnRef.forEach(btn => {
         let spanEle = activeExpBtn.querySelector("span");
         spanEle.style.color="#1DB954";
 
-
-        const expDescRef = document.querySelectorAll('.exp-desc');
-        expDescRef.forEach(item=>{
-            if(item.style.display !== "none"){
-                item.style.display = "none";
-            }
-        })
+        hiddingBlocks("exp-desc");
         
-        const targetDescId = 'exp-desc-'+ (e.target.id.split('-').pop()).toString();
-        const targetDescRef = document.getElementById(targetDescId);
-        targetDescRef.style.display = 'block';
+        handleActiveBlock("exp-active");
         // console.log(targetDescId);
 
     })
