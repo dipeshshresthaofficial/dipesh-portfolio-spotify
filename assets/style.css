@@ -362,7 +362,7 @@ width: 40%;
   display: none;
 }
 
-#edu-desc p, #exp-desc p{
+#edu-desc p, #exp-desc p, #exp-headings span{
   font-size: 13px;
   margin: 5px 0;
   color: var(--light-grey);
@@ -411,7 +411,7 @@ width: 40%;
 #exp-headings{
   /* float: right;
   display: inline-block; */
-  width: 40%;
+  width: 42%;
   margin-right: 20px;
 }
 
@@ -433,6 +433,10 @@ width: 40%;
   background-color: var(--light-grey) !important;
   border-right: 2px solid var(--spotify-green) !important;
   transition: 1.5s;
+}
+
+.exp-active span{
+  color: var(--spotify-green)!important;
 }
 
 

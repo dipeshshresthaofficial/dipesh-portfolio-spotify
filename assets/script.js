@@ -51,13 +51,15 @@ eduBtn.forEach(btn=>{
 
 // Toggle Feature of Experience Section
 const expBtnRef = document.querySelectorAll('.exp-btn');
+// document.getElementsByClassName("exp-active").querySelector("span").style.color="white";
 expBtnRef.forEach(btn => {
     btn.addEventListener('click',e=>{
+        
         // Since button is clicked so previously active button is made inactive
         expBtnRef.forEach(btn => {
             if(btn.classList.contains('exp-active')){
-
                 btn.classList.remove('exp-active');
+                btn.querySelector("span").style.color="#5a5656";
             }
         })
         
@@ -68,6 +70,9 @@ expBtnRef.forEach(btn => {
         const activeExpBtn = document.getElementById(id);
         // Making clicked button active
         activeExpBtn.classList.add('exp-active');
+        let spanEle = activeExpBtn.querySelector("span");
+        spanEle.style.color="#1DB954";
+
 
         const expDescRef = document.querySelectorAll('.exp-desc');
         expDescRef.forEach(item=>{
